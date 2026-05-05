@@ -33,9 +33,9 @@ def _get_dataset_cls():
 
 def _get_model_save_path():
     if config.get('crisis_mmd_like_dataset_to_use') == constants.FIELD_CRISIS_MMD_DATASET:
-        return "/home/shahid/1.Mihir/cafunet-acl2026/models/cirsis_mmd_vision_text_pipeline/saved_model/crisis_mmd_model.pth"
+        return "./checkpoints/cirsis_mmd_vision_text_pipeline/saved_model/crisis_mmd_model.pth"
     elif config.get('crisis_mmd_like_dataset_to_use') == constants.FIELD_TSEQD_DATASET:
-        return "/home/shahid/1.Mihir/cafunet-acl2026/models/cirsis_mmd_vision_text_pipeline/saved_model/tseqd_model.pth"
+        return "./checkpoints/cirsis_mmd_vision_text_pipeline/saved_model/tseqd_model.pth"
     return None
 
 def get_crisis_mmd_vision_text_pipline_model_runners(

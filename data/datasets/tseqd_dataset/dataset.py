@@ -216,7 +216,7 @@ class TSEQDDataset(DatasetInterface):
     def get_data_item(self, idx=-1) -> DataItemSchema:
         df_image_path = self.dataframe.iloc[idx]["image_path"]
         image_file_name = os.path.basename(df_image_path)   
-        image_path = f"/home/shahid/4.TSEQD/Final_Images_TSEQD/{image_file_name}"
+        image_path = f"./data/Final_Images_TSEQD/{image_file_name}"
 
         image_id = f"{self.split_run_type}_{image_file_name}"
 
