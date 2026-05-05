@@ -11,46 +11,46 @@ submission-code/
 │
 ├── models/
 │   ├── cirsis_mmd_vision_text_pipeline/
-│   │   └── model.py                # CAFuNet main model
+│   │   └── model.py                # main model
 │   └── vision_text_pipeline_common/
-│       ├── clip_embedding.py       # CLIP encoder wrapper
+│       ├── clip_embedding.py       
 │       ├── text_vision_fuser/
-│       │   └── model.py            # Vision & Text encoders with topic conditioning
-│       ├── block_fusion.py         # Projected Bilinear Block Fusion (PBBF)
-│       ├── fuzz_feature_extractor.py       # Fuzzy feature extraction
-│       └── fuzzy_membership_network.py     # CGC membership functions
+│       │   └── model.py            
+│       ├── block_fusion.py         
+│       ├── fuzz_feature_extractor.py       
+│       └── fuzzy_membership_network.py    
 │
 ├── topic_modelling/
-│   ├── crisis_mmd.py               # BERTopic induction for CrisisMMD
-│   └── tseqd.py                    # BERTopic induction for TSEqD
+│   ├── crisis_mmd.py              
+│   └── tseqd.py                   
 │
 ├── data/
 │   ├── dataloader_interface.py     # DataLoader construction
 │   ├── dataset_interface.py        # Dataset base interface
 │   └── datasets/
 │       ├── crisis_mmd_dataset/
-│       │   └── dataset.py          # CrisisMMD data loading & preprocessing
+│       │   └── dataset.py          
 │       └── tseqd_dataset/
-│           └── dataset.py          # TSEqD data loading & preprocessing
+│           └── dataset.py          
 │
 ├── model_meta_components/
 │   └── loss_functions/
-│       ├── vision_text_pipeline_loss_function.py   # CE + contrastive loss
+│       ├── vision_text_pipeline_loss_function.py   
 │       └── vtp_cross_entropy_loss.py
 │
 ├── runner_builders/
-│   ├── base.py                     # Runner factory
-│   └── crisis_mmd_runners.py       # Runner configs (optimizer, scheduler, weights)
+│   ├── base.py                    
+│   └── crisis_mmd_runners.py       
 │
 ├── runner_interfaces/
-│   ├── pytorch_runner_interface.py  # Train/val/test epoch logic
+│   ├── pytorch_runner_interface.py  
 │   └── ...
 │
 ├── utils/
 │   ├── config_utils.py             # YAML config loader
-│   ├── metric_utils.py             # Accuracy, Precision, Recall, F1
-│   ├── data_utils.py               # DataLoader param helpers
-│   └── gpu_utils.py                # Device selection
+│   ├── metric_utils.py             
+│   ├── data_utils.py               
+│   └── gpu_utils.py                
 │
 └── requirements.txt
 ```
