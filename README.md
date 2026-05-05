@@ -57,10 +57,6 @@ submission-code/
 
 ## Topic Induction
 
-CAFuNet uses **BERTopic** with `distilroberta-base-msmarco-v1` sentence embeddings to extract domain-specific topics from the training corpus. Topics are induced offline and loaded during training.
-
-To run topic induction for CrisisMMD:
-
 ```bash
 python -m topic_modelling.crisis_mmd
 ```
@@ -70,8 +66,6 @@ For TSEqD:
 ```bash
 python -m topic_modelling.tseqd
 ```
-
-The induced topic models are saved to `topic_modelling/crisis_mmd_topic_model/` and `topic_modelling/tseqd_topic_model/`, respectively. Set `train_bert_topic: true` in `config.yaml` to re-train the topic model during the main run, or `false` to load from disk.
 
 ## Training
 
