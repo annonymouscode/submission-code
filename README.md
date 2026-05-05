@@ -67,25 +67,6 @@ For TSEqD:
 python -m topic_modelling.tseqd
 ```
 
-## Training
-
-All training configuration is managed through `config.yaml`. Key hyperparameters:
-
-| Parameter | Default | Description |
-|:----------|:--------|:------------|
-| `seed` | 11 | Random seed |
-| `num_epochs` | 100 | Maximum training epochs (early stopping applied) |
-| `train_batch_size` | 32 | Training batch size |
-| `embedding_dim` | 512 | Shared embedding dimensionality |
-| `num_selected_topics` | 40 | Number of topic embeddings (N_t) |
-| `cl_loss_temperature` | 1.0 | Contrastive loss temperature (tau) |
-| `max_len_text` | 128 | Maximum text token length |
-| `use_lr_scheduler` | 1 | Enable StepLR scheduler |
-| `apply_gradient_clipping` | 1 | Enable gradient clipping |
-| `crisis_mmd_like_dataset_to_use` | `crisis_mmd_dataset` | Dataset selector (`crisis_mmd_dataset` or `tseqd_dataset`) |
-
-**Optimizer:** AdamW (lr=5e-5, weight_decay=7e-5) with StepLR (step_size=5, gamma=0.8).
-
 ### Run training
 
 ```bash
